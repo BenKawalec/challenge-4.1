@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Javascript Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="heading">
+        <div id="high-score">
+            <button id="high-score-button" class="btn btn-primary">View High Scores</button>
+        </div>
+        <div id="timer">
+            <h4 id="timeLeft">Time left: 75</h4>
+        </div>
+    </div>
+    <main>
+        <div id="intro">
+            <h1>Coding Quiz Challenge</h1>  
+                <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds
+                </p>
+        </div>
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-buttons">
+                <button id='a' class="answer-button btn btn-primary" onclick="checkAnswer('a')">A</button>
+                <button id='b' class="answer-button btn btn-primary"  onclick="checkAnswer('b')">B</button>
+                <button id='c' class="answer-button btn btn-primary"  onclick="checkAnswer('c')">C</button>
+                <button id='d' class="answer-button btn btn-primary"  onclick="checkAnswer('d')">D</button>
+            </div>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="start-btn btn btn-primary">Start</button>
+            <button id="next-btn" class="next-btn btn btn-primary hide">Next</button>
+        </div>
+        <div id="end-screen" class="hide">
+            <div class="container end">
+                <div id=score-banner>
+                    <h1>All done!</h1>
+                    <h2 id="score-display"></h2>
+                </div>  
+                <form id="initials-form" class="initials">
+                  <p> Enter Initials:
+                    <input type="text" name="initials" id="initials" class="text-input" />
+                    <button class="startend btn btn-primary" id="submit-score" type="submit" >Submit</button> </p>
+                  </form>
+                </div>
+        </div>
+        <div id="high-scores" class="hide">
+            <div class="high-scores container">
+                <h1 class="high-score">High Scores</h1>
+                <div id="user-score-container">
+                <h4 id="high-score-initals"></h4>
+                <h4 id='user-score' class="hide-dot"></h4>
+            </div>
+            <div>
+                <button class="btn btn-primary" id="go-back">Go back</button>
+                <button class="btn btn-primary" id="clear-high-scores">Clear high scores</button>
+            </div>
+            </div>   
+        </div>
+    </main>
+    
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>
